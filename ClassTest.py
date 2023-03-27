@@ -24,7 +24,7 @@ class StudentList:
 
 if __name__ == '__main__':
     # 入参自己定义
-    s1 = Student("10001","男","张三")
+    s1 = Student("10001","男","张三1")
     s2 = Student("10002","女","李四")
     s3 = Student("10003","男","王五")
     # 初始化一个成员名单
