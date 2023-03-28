@@ -1,35 +1,24 @@
-class Student:
-    def __init__(self,id,s,n):
-        self.id = id
-        self.sex = s
-        self.name = n
-    pass
+class Account:
+
+    # 普通属性
+    bank = "BOC"
+    # 内部属性
+    _username = "Hogwarts"
+    # 私有属性
+    __password = "888"
 
 
-class StudentList:
-    def __init__(self, student_list):
-        self.s_list = student_list
+# 通过类名访问类属性
+# print(Account.bank)  # 将会打印 BOC
+# print(Account._username)  # 将会打印 Hogwarts
+print(Account.__password)  # 将会引发 AttributeError
 
-    def get(self, student_id):
+print(Account.__dict__)
 
-        print(student_id.id)
-        print(student_id.sex)
-        print(student_id.name)
-        pass
+# 实例化
+obj = Account()
 
-    def delete(self, student_id):
-        del student_id
-        pass
-
-
-if __name__ == '__main__':
-    # 入参自己定义
-    s1 = Student("10001","男","张三2")
-    s2 = Student("10002","女","李四")
-    s3 = Student("10003","男","王五")
-    # 初始化一个成员名单
-    s_list = StudentList([s1, s2, s3])
-    # 实现get()方法
-    s_list.get(s1)
-    # 实现delete
-    s_list.delete(s1)
+# 实例访问类属性
+# print(obj.bank)  # 将会打印 BOC
+# print(obj._username)  # 将会打印 Hogwarts
+# print(obj.__username)  # 将会引发AttributeError
